@@ -1,0 +1,104 @@
+/********************************************/
+/*********** ANIMATIONS ********************/
+/******************************************/
+
+@keyframes blueLoop {
+	0% {top: 0px; left: 0px;}
+	25% {top: 100px; left: 100px;}
+	50% {top: 375px; left: 375px;}
+	75% {}
+	100% {transform: translate(0,0);}
+}
+@keyframes redLoop {
+	0% {top: 0px; right: 0px;}
+	25% {top: 100px; right: 100px;}
+	50% {top: 375px; right: 375px;}
+	75% {}
+	100% {transform: translate(0,0);}
+}
+@keyframes greenLoop {
+	0% {bottom: 0px; left: 0px;}
+	25% {bottom: 100px; left: 100px;}
+	50% {bottom: 375px; left: 375px;}
+	75% {}
+	100% {transform: translate(0,0);}
+}
+@keyframes yellowLoop {
+	0% {bottom: 0px; right: 0px;}
+	25% {bottom: 100px; right: 100px;}
+	50% {bottom: 375px; right: 375px;}
+	75% {}
+	100% {transform: translate(0,0);}
+}
+
+@keyframes boxLoop {
+	0% {transform: rotate(45deg);}
+	25% {transform: rotate(135deg);}
+	50% {transform: rotate(225deg);}
+	75% {transform: rotate(315deg);}
+	100% {transform: rotate(405deg);}
+}
+/********************************************/
+/***********   SHAPES   ********************/
+/******************************************/
+body {
+	background-color: hsl(175,30%,20%);
+}
+
+.box {
+	position: relative;
+	top: 300px;
+	left: 300px;
+	height: 350px;
+	width: 350px;
+	background-color: transparent;
+  animation-name: boxLoop;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+
+.ball {
+	height: 70px;
+	width:  70px;
+	border-radius: 50%;
+} 
+
+#blue {
+	background-color: hsl(175, 40%, 60%);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	animation-name: blueLoop;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+#red {
+	background-color: hsl(0, 60%, 60%);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	animation-name: redLoop;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;	
+}
+
+#green {
+	background-color: hsl(120, 50%, 60%);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	animation-name: greenLoop;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+#yellow {
+	background-color: hsl(55, 80%, 60%);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	animation-name: yellowLoop;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
