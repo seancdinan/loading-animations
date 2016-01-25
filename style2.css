@@ -1,0 +1,23 @@
+body {
+	background-color: hsl(180, 20%, 20%);
+	position: relative;
+}
+
+@keyframes outerLoop {
+	0% {height: 1px; width: 1px; transform: rotate(0deg);      transform-origin: center bottom;}
+	30% {height: 800px; width: 20px; transform: rotate(00deg); transform-origin: center bottom;}
+	50% {height: 800px; width: 20px; transform: rotate(90deg); transform-origin: center bottom;}
+	70% {height: 20px; width: 800px; transform: rotate(90deg); transform-origin: center top;}
+	100% {height: 800px; width: 800px; transform: rotate(0deg);transform-origin: center center;}
+}
+
+.outerBox {
+	background-color: hsl(175,30%,60%);
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	animation-name: outerLoop;
+	animation-duration: 4s;
+	animation-iteration-count: 3;
+}
+
