@@ -38,6 +38,18 @@
 	75% {transform: rotate(315deg);}
 	100% {transform: rotate(405deg);}
 }
+@keyframes ballDrop {
+	0% {transform: translate(0,0);}
+	50% {transform: translate(0,140px);}
+	75% {transform: translate(0,140px);}
+	100% {transform: translate(0,0);}
+}
+@keyframes reverseBallDrop {
+	0% {transform: translate(0,0);}
+	50% {transform: translate(0,-140px);}
+	75% {transform: translate(0,-140px);}
+	100% {transform: translate(0,0);}
+}
 /********************************************/
 /***********   SHAPES   ********************/
 /******************************************/
@@ -45,16 +57,26 @@ body {
 	background-color: hsl(175,30%,20%);
 }
 
-.box {
+.box1 {
 	position: relative;
-	top: 300px;
-	left: 300px;
+	float: left;
+	top: 200px;
+	left: 200px;
 	height: 350px;
 	width: 350px;
 	background-color: transparent;
   animation-name: boxLoop;
 	animation-duration: 8s;
 	animation-iteration-count: infinite;
+}
+.box2 {
+	position: relative;
+	float: right;
+	top: 200px;
+	left: -400px;
+	height: 350px;
+	width: 350px;
+	background-color: transparent;
 }
 
 .ball {
@@ -101,4 +123,86 @@ body {
 	animation-name: yellowLoop;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
+}
+
+#ball1 {
+	background-color: hsl(175, 40%, 60%);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	animation-name: ballDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+}
+#ball2 {
+	background-color: hsl(0, 60%, 60%);
+	position: absolute;
+	top: 0px;
+	left: 92px;
+	animation-name: ballDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 200ms;
+}
+#ball3 {
+	background-color: hsl(120, 50%, 60%);
+	position: absolute;
+	top: 0px;
+	right: 92px;
+	animation-name: ballDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 380ms;
+}
+#ball4 {
+	background-color: hsl(55, 80%, 60%);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	animation-name: ballDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 500ms;
+}
+
+#ball5 {
+	background-color: hsl(175, 40%, 60%);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	animation-name: reverseBallDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+}
+#ball6 {
+	background-color: hsl(0, 60%, 60%);
+	position: absolute;
+	bottom: 0px;
+	left: 92px;
+	animation-name: reverseBallDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 200ms;
+}
+#ball7 {
+	background-color: hsl(120, 50%, 60%);
+	position: absolute;
+	bottom: 0px;
+	right: 92px;
+	animation-name: reverseBallDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 380ms;
+}
+#ball8 {
+	background-color: hsl(55, 80%, 60%);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	animation-name: reverseBallDrop;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-delay: 500ms;
 }
